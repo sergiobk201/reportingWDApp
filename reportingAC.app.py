@@ -6,12 +6,19 @@ Created on Wed Nov  6 10:03:17 2024
 @author: sergiobarrientoskellemberger
 """
 
-import streamlit as st
 import pandas as pd
+import requests
+from io import BytesIO
 
-# Load Excel file
-excel_path = "https://github.com/sergiobk201/reportingWDApp/raw/main/delivered_reports.xlsx"
-df = pd.read_excel(excel_path)
+# Replace with your actual raw GitHub URL
+excel_url = "https://github.com/your-username/your-repo/raw/main/delivered_reports.xlsx"
+
+# Download the file
+response = requests.get(excel_url)
+response.raise_for_status()  # Check for errors
+
+# Read the Excel file into Pandas
+df = pd.read_excel(BytesIO(response.content)
 
 # Convert 'Fields' column into sets for easier comparison
 df["Fields"] = df["Fields"].apply(lambda x: set(str(x).split("\n")))
