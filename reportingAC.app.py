@@ -11,7 +11,7 @@ import requests
 from io import BytesIO
 
 # Replace with your actual raw GitHub URL
-excel_url = "https://github.com/your-username/your-repo/raw/main/delivered_reports.xlsx"
+excel_url = "https://github.com/sergiobk201/reportingWDApp/raw/main/delivered_reports.xlsx"
 
 # Download the file
 response = requests.get(excel_url)
