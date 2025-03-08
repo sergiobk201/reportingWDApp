@@ -18,7 +18,7 @@ response = requests.get(excel_url)
 response.raise_for_status()  # Check for errors
 
 # Read the Excel file into Pandas
-df = pd.read_excel(BytesIO(response.content)
+df = pd.read_excel(BytesIO(response.content))
 
 # Convert 'Fields' column into sets for easier comparison
 df["Fields"] = df["Fields"].apply(lambda x: set(str(x).split("\n")))
