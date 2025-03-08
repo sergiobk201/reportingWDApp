@@ -10,7 +10,7 @@ import streamlit as st
 import pandas as pd
 
 # Load Excel file
-excel_path = r"/Users/sergiobarrientoskellemberger/Downloads/delivered_reports.xlsx"
+excel_path = "https://github.com/sergiobk201/reportingWDApp/raw/main/delivered_reports.xlsx"
 df = pd.read_excel(excel_path)
 
 # Convert 'Fields' column into sets for easier comparison
