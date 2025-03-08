@@ -6,7 +6,7 @@ import requests
 from io import BytesIO
 
 # GitHub raw file URL (Replace with your actual URL)
-GITHUB_EXCEL_URL = "https://github.com/sergiobk201/reportingWDApp/raw/main/delivered_reports.xlsx"
+GITHUB_EXCEL_URL = "https://github.com/sergiobk201/reportingWDApp/main/delivered_reports.xlsx"
 
 @st.cache_data  # Cache to avoid downloading the file multiple times
 def load_data():
